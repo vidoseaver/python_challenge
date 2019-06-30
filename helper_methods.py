@@ -1,3 +1,5 @@
+from pprint import pformat
+
 def to_snake_case(string):
     word = ""
     for index, letter in enumerate(string):
@@ -10,3 +12,4 @@ def to_snake_case(string):
         else:
             word = word + letter.lower()
     return word
+

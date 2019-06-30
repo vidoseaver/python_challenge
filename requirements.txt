@@ -1,3 +1,4 @@
-re
-requests
-dotenv
+re       # for regex, think this included but not quite sure.
+requests # for making http requests
+dotenv   # for setting and using .env files
+pprint   # pretty print for better debugging
