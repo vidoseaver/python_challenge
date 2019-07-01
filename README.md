@@ -24,4 +24,4 @@ When that command is entered the program will grab that file path and generate a
 
 The ip populator is responsible for reading in the path, determinng if its been run against this file before and whether a json file exists for that path. And then generating and storing IpModel from either the json file for that path or the responses it gets from the GeoIpService.
 
-Once this is done a a repl object is kicked on that allows you to query the data. The repl is relatively simple and uses a IpFilter class to query the data. You can return items with a specific attribute for a specific value.
+Once this is done a a repl object is kicked on that allows you to query the data. The repl is relatively simple and uses a IpFilter class to query the data. You can return items with a specific attribute for a specific value. 

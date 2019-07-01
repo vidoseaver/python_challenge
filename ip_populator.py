@@ -64,12 +64,13 @@ class IpPopulator():
         modeled_ip.set_geo_ip_data_to_attributes(
             data=data)
         self.list_of_ip_objects.append(modeled_ip)
-        self.dict_of_ip_objects[ip] = modeled_ip
+        self.dict_of_ip_objects[ip] = modeled_ip.__dict__
         self.add_attributes_to_list_of_geo_ip_attributes(modeled_ip=modeled_ip)
         print(modeled_ip.ip + " fetched, modeled and stored")
 
     def add_attributes_to_list_of_geo_ip_attributes(self, modeled_ip):
-        ip_keys = [k for k in modeled_ip.data]
-        comined_with_other_possible_keys = ip_keys + self.list_of_ip_geo_attributes
+        data_copy = modeled_ip.__dict__
+        ip_keys = [k for k in data_copy]        
+        combined_with_other_possible_keys = ip_keys + self.list_of_ip_geo_attributes
         self.list_of_ip_geo_attributes = list(
-            set(comined_with_other_possible_keys))
+            set(combined_with_other_possible_keys))
